@@ -1,0 +1,31 @@
+﻿@model Cliente
+
+<form asp-controller="Cliente" asp-action="Update" method="POST">
+    <h2>Editar Cliente</h2>
+    <br />
+    <div class="form-group">
+        <label> Nome </label>
+        <input asp-for="Nome" class="form-control" maxlength="50" />
+        <span asp-validation-for="Nome"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Descrição</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Preço</label>
+        <input asp-for="Senha" class="form-control" maxlength="20"/>
+        <span asp-validation-for="Senha"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Qtd Estoque</label>
+        <input asp-for="statusCli" class="form-control" />
+        <span asp-validation-for="statusCli"></span>
+    </div>  
+
+    <button class="btn btn-primary">Salvar</button>
+</form>
