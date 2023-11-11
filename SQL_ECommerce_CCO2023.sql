@@ -81,6 +81,7 @@ select * from Categorias
 select * from Produtos
 go
 
+-- Apartir deste ponto foi feito Por mim
 
 create view v_Produto
 as
@@ -90,4 +91,91 @@ as
 go
 
 select * from v_Produto
+go
+
+alter view v_Produto
+as
+	select P.idProduto, P.nome, P.descricao, P.qtdProd, P.valor, P.urlImg, P.catId, C.nome nomeCat, p.status
+	from Categorias C, Produtos P
+	where P.catId = C.idCat
+go
+
+
+create procedure sp_UpProduto
+(
+	@idProduto	int,
+	@nomeProd	varchar(20),
+	@descProd	varchar(100),
+	@qtdProd	int,
+	@precoProd	decimal(6,2),
+	@imgProd	varchar(150),
+	@stsProd	int,
+	@catIdProd	int
+)
+as
+begin
+	update Produtos SET
+		nome = @nomeProd,
+		descricao = @descProd,
+		qtdProd = @qtdProd,
+		valor = @precoProd,
+		urlImg = @imgProd,
+		status = @stsProd,
+		catId = @catIdProd
+	WHERE idProduto = @idProduto;
+end 
+go
+
+
+---------------------------------------
+-- TABELA Clientes
+---------------------------------------
+create table Clientes
+(
+	idCliente	int				not null	primary key		identity,
+	nome		varchar(50)		not null,
+	email		varchar(100)	not null,
+	senha		varchar(20)	not null,
+	status		int					null
+)
+go
+
+create procedure sp_CadCliente
+(
+	@nome	varchar(50),
+	@email	varchar(100),
+	@senha	varchar(20),
+	@satus	int
+)
+as
+begin
+	insert into Clientes (nome, email, senha, status)
+	values(@nome, @email, @senha, @satus)
+end 
+go
+
+exec sp_CadCliente 'Lucas Pinheiro Olhê Borges', 'lucasxingu@gmail.com', 'testeSenha123', 1;
+go
+
+
+create view v_Cliente
+as
+	select c.idCliente, c.nome, c.email, c.senha, c.status
+	from Clientes c
+go
+
+create procedure sp_UpCliente
+(
+	@idCliente	int,
+	@nome		varchar(50),
+	@email		varchar(100),
+	@senha		varchar(20),
+	@satus		int
+)
+as
+begin
+	update Clientes SET 
+		nome = @nome, email = @email, senha = @senha, status = @satus
+	WHERE idCliente = @idCliente
+end 
 go
