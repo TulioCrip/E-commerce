@@ -81,7 +81,6 @@ select * from Categorias
 select * from Produtos
 go
 
--- Apartir deste ponto foi feito Por mim
 
 create view v_Produto
 as
@@ -92,6 +91,8 @@ go
 
 select * from v_Produto
 go
+
+-- Apartir deste ponto foi feito Por mim
 
 alter view v_Produto
 as
