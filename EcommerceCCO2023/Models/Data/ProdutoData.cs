@@ -15,6 +15,9 @@ namespace EcommerceCCO2023.Models.Data
         {
             bool sucesso = false;
 
+            //Corrige o caso de estar com ',' em vez de '.' no banco de dados
+            produto.Valor = String.Join(".", produto.Valor.Split(','));
+
             // criar a string SQL para fazer o cadastro
             // de novos produtos
             string insert = "exec sp_CadProduto '" +
@@ -134,15 +137,16 @@ namespace EcommerceCCO2023.Models.Data
         public bool Update(Produto produto)
         {
             bool sucesso = false;
-
+            //Corrige o caso de estar com ',' em vez de '.' no banco de dados
+            produto.Valor = String.Join(".", produto.Valor.Split(','));
             // criar a string SQL para fazer o update
             // de produto
             string update = "exec sp_UpProduto " +
                 produto.IdProduto + ", '" +
                 produto.NomeProd + "', '" +
                 produto.Descricao + "', " +
-                produto.Quantidade + ", " +
-                produto.Valor + ", '" +
+                produto.Quantidade + ", '" +
+                produto.Valor + "', '" +
                 produto.UrlImagem + "', " +
                 produto.Status + ", " +
                 produto.Categoria.IdCategoria;
