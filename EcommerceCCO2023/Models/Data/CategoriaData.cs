@@ -40,8 +40,8 @@ namespace EcommerceCCO2023.Models.Data
             while(reader.Read())
             {
                 Categoria categoria = new Categoria();
-                categoria.IdCategoria   = (int) reader["idCat"];
-                categoria.NomeCategoria = reader["nome"].ToString();
+                categoria.IdCategoria   = (int) reader["idCategoria"];
+                categoria.NomeCategoria = reader["Categoria"].ToString();
                 lista.Add(categoria);
             }
             return lista;

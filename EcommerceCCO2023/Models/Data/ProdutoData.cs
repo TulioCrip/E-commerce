@@ -75,7 +75,7 @@ namespace EcommerceCCO2023.Models.Data
                 {                                      
                     Produto prod = new Produto();
                     prod.IdProduto = (int)reader["idProduto"];
-                    prod.NomeProd = reader["nome"].ToString();
+                    prod.NomeProd = reader["nomeProd"].ToString();
                     prod.Descricao = reader["descricao"].ToString();
                     prod.Quantidade = (int)reader["qtdprod"];
                     prod.Valor =  reader["valor"].ToString();
@@ -83,8 +83,8 @@ namespace EcommerceCCO2023.Models.Data
                     {
                         prod.UrlImagem = reader["UrlImg"].ToString();
                     }
-                    prod.Categoria.IdCategoria = (int)reader["catid"];
-                    prod.Categoria.NomeCategoria = reader["nomeCat"].ToString();
+                    prod.Categoria.IdCategoria = (int)reader["idCategoria"];
+                    prod.Categoria.NomeCategoria = reader["Categoria"].ToString();
                     lista.Add(prod);
                 }
             } 
@@ -116,7 +116,7 @@ namespace EcommerceCCO2023.Models.Data
             {
                 prod = new Produto();
                 prod.IdProduto = (int)reader["idProduto"];
-                prod.NomeProd = reader["nome"].ToString();
+                prod.NomeProd = reader["nomeProd"].ToString();
                 prod.Descricao = reader["descricao"].ToString();
                 prod.Quantidade = (int)reader["qtdProd"];
                 prod.Valor = reader["valor"].ToString();
@@ -124,8 +124,8 @@ namespace EcommerceCCO2023.Models.Data
                 {
                     prod.UrlImagem = reader["urlImg"].ToString();
                 }
-                prod.Categoria.IdCategoria = (int)reader["catId"];
-                prod.Categoria.NomeCategoria = reader["nomeCat"].ToString();
+                prod.Categoria.IdCategoria = (int)reader["idCategoria"];
+                prod.Categoria.NomeCategoria = reader["Categoria"].ToString();
                 prod.Status = (int)reader["status"];
 
             }

@@ -66,7 +66,8 @@ namespace EcommerceCCO2023.Models.Data
                 {
                     Cliente clie = new Cliente();
                     clie.IdCliente = (int)reader["idCliente"];
-                    clie.Nome = reader["nome"].ToString();
+                    clie.Nome = reader["nomeCli"].ToString();
+                    clie.Foto = reader["foto"].ToString();
                     clie.Email = reader["email"].ToString();
                     clie.Senha = reader["senha"].ToString();
                     clie.statusCli = (int)reader["status"];
@@ -101,7 +102,8 @@ namespace EcommerceCCO2023.Models.Data
             {
                 clie = new Cliente();
                 clie.IdCliente = (int)reader["idcliente"];
-                clie.Nome = reader["nome"].ToString();
+                clie.Nome = reader["nomeCli"].ToString();
+                clie.Foto = reader["foto"].ToString();
                 clie.Email = reader["email"].ToString();
                 clie.Senha = reader["senha"].ToString();
                 clie.statusCli = (int)reader["status"];
@@ -120,6 +122,7 @@ namespace EcommerceCCO2023.Models.Data
             string update = "exec sp_UpCliente " +
                 cliente.IdCliente + ", '" +
                 cliente.Nome + "', '" +
+                cliente.Foto + "', '" +
                 cliente.Email + "', '" +
                 cliente.Senha + "', " +
                 cliente.statusCli;
