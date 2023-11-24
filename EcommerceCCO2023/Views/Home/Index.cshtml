@@ -1,12 +1,18 @@
 ﻿@model List<Produto>
 
+<p class="slogan rounded-3">
+    <b><i>"A Fonte de Sabores de Teyvat que Desperta o Prazer em Cada Mordida"</i></b>
+</p>
+
+<br />
     <!-- Partial View para exibir o Carousel -->
     <partial name="_Carousel" />
+    <br />
 
-    <h2>Seu Preferidos! </h2>
-    <h4>vai mais um ai? </h4>
 
-    <div class="row">
+<h2 class="preferidos1 rounded-3 mx-auto">Cardápio</h2>
+
+    <div class="row mx-auto">
         <!-- Usando a Partial View para exibir os lanches preferidos -->
         @foreach (var lanche in Model)
         {

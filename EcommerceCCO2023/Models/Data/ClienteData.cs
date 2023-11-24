@@ -16,6 +16,7 @@ namespace EcommerceCCO2023.Models.Data
             // de novos clientes
             string insert = "exec sp_Cadcliente '" +
                 cliente.Nome + "', '" +
+                cliente.Foto + "', '" +
                 cliente.Email + "', '" +
                 cliente.Senha + "', " +
                 cliente.statusCli;
