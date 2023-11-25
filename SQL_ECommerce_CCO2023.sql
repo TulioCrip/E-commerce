@@ -76,7 +76,7 @@ create procedure sp_CadProduto
 as
 begin
 	insert into Produtos (nome, descricao, qtdProd, valor, urlImg, status, categoriaId)
-	values(@nomeProd, @descProd, @qtdProd, (@precoProd/100), @imgProd, @stsProd, @catIdProd)
+	values(@nomeProd, @descProd, @qtdProd, @precoProd, @imgProd, @stsProd, @catIdProd)
 end 
 go
 
@@ -122,7 +122,7 @@ create procedure sp_UpProduto
 as
 begin
 	update Produtos set nome = @nomeProd, descricao = @descProd, 
-						qtdProd = @qtdProd, valor = (@precoProd/100), 
+						qtdProd = @qtdProd, valor = @precoProd, 
 						urlImg = @imgProd, status = @stsProd, 
 						categoriaId = @catIdProd
 	where idProduto = @idProd

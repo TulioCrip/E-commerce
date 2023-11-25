@@ -6,51 +6,57 @@
     <title>@ViewData["Title"] Linguagem de Programação - UNIRP</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Vendas lanches by Lela Gourmet</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Produto" asp-action="IndexProd">Produto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="IndexCliente">Cliente</a>
-                        </li>
-                    </ul>
+    <link rel="stylesheet" href="~/css/Loyout.css" />
+    <header>      
+        <nav class=" p-auto navbar navbar-default navbar-fixed-top navbar-expand-sm navbar-toggleable-sm box-light box-shadow mb-5 ">
+            <img src="~/images/Furininha.png" class="mr-4">
+            <div class="mx-auto">  
+                <a class="navbar-brand " asp-area="" asp-controller="Home" asp-action="Index"><b><i>Furina's Burguers</i></b></a>
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><b>Home </b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Produto" asp-action="IndexProd"><b>Produto </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="IndexCliente"><b>Cliente </b></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <img src="~/images/FurininhaD.png" class="ml-4">
         </nav>
     </header>
+</head>
+<body>
+    <style>       
+        </style>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
+    <footer class="p-auto footer text-muted">
         <div class="container">
-            <div class="row align-items-start">
-                <div class="col">
-                    <img src="~/images/WhatsApp.png" alt="WhatsApp" class="img-fluid"> (17) 98809-3889
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <img src="~/images/WhatsApp.png" alt="WhatsApp" class="img-fluid"> (17) 92349-3858
                 </div>
-                <div class="col">
-                    <img src="~/images/Facebook.png" alt="Facebook" class="img-fluid"> Lela Volpe
+                <div class="col-md-2">
+                    <img src="~/images/Facebook.png" alt="Facebook" class="img-fluid"> Furina s Burguer
                 </div>
-                <div class="col">
-                    <img src="~/images/Instagram.png" alt="Instagram" class="img-fluid"> "@@LelaVolpe"
+                <div class="col-md-2">
+                    <img src="~/images/Instagram.png" alt="Instagram" class="img-fluid"> "@@FurinasBurguer"
                 </div>
-                <div class="col">
+                <div class="col-md-2">
                     <img src="~/images/Logo_CCO2.png" alt="Instagram" class="img-fluid">  
                 </div>
             </div>

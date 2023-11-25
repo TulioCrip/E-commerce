@@ -1,41 +1,44 @@
 ﻿@model Cliente
 
 <form asp-controller="Cliente" asp-action="Update" method="POST">
-    <h2>Editar Cliente</h2>
+    <h3 class=" titulo rounded-3 card p-3">Editar Cliente</h3>
     <br />
+   <div class="cardEditar card p-3">
     @if (!String.IsNullOrEmpty(@Model.Foto))
     {
-        <p style="text-align: center; align-items: center"><img src="~/images/@Model.Foto" alt="@Model.Foto" class="img-fluid"></p>
+        <p><img src="~/images/@Model.Foto" alt="@Model.Foto" class=" card mx-auto p-3 img-fluid"></p>
     }
-    <div class="form-group">
-        <label> Nome </label>
-        <input asp-for="Nome" class="form-control" maxlength="50" />
-        <span asp-validation-for="Nome"></span>
-    </div>
+        <div class="form-group">
+            <label> Nome </label>
+            <input asp-for="Nome" class="form-control" maxlength="50" />
+            <span asp-validation-for="Nome"></span>
+        </div>
 
-    <div class="form-group">
-        <label>Descrição</label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email"></span>
-    </div>
+        <div class="form-group">
+            <label>E-mail</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email"></span>
+        </div>
 
-    <div class="form-group">
-        <label>Senha</label>
-        <input asp-for="Senha" class="form-control" maxlength="20"/>
-        <span asp-validation-for="Senha"></span>
-    </div>
+        <div class="form-group">
+            <label>Senha</label>
+            <input asp-for="Senha" class="form-control" maxlength="20"/>
+            <span asp-validation-for="Senha"></span>
+        </div>
 
-    <div class="form-group">
-        <label>Status [ 1 - Ativo, 2 - Inativo]</label>
-        <input asp-for="statusCli" class="form-control" />
-        <span asp-validation-for="statusCli"></span>
-    </div>
+        <div class="form-group">
+            <label>Status [ 1 - Ativo, 2 - Inativo]</label>
+            <input asp-for="statusCli" class="form-control" />
+            <span asp-validation-for="statusCli"></span>
+        </div>
 
-    <div class="form-group">
-        <label>Foto</label>
-        <input asp-for="Foto" class="form-control" />
-        <span asp-validation-for="statusCli"></span>
-    </div>
-
-    <button class="btn btn-primary">Salvar</button>
+        <div class="form-group">
+            <label>Foto</label>
+            <input asp-for="Foto" class="form-control" />
+            <span asp-validation-for="statusCli"></span>
+        </div>
+   </div>
+    <br />
+    <button style="align-items:center; font-size: 30px; width:300px;" class="card p-2 btn-primary mx-auto">Salvar</button>
+    <br />
 </form>

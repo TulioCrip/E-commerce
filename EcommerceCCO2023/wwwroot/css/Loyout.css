@@ -1,0 +1,108 @@
+﻿.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: solid lightblue 4px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.navbar-brand {
+    font-size: 40px;
+    font-family: 'Copperplate Gothic';
+    font-style: oblique;
+    text-decoration-color: aqua;
+}
+
+.nav-item {
+    font-size: 25px;
+    font-family: 'Copperplate Gothic';
+    text-decoration-color: aqua;
+}
+
+body {
+    background-image: url("/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #87ceeb;
+    background-position: left;
+    padding: 0px;
+    margin: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+    width: auto;
+    height: auto;
+    align-items: center;
+    border-top: solid lightblue 4px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.produto {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid lightblue 4px;
+}
+
+.cardEditar {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid lightblue 4px;
+}
+
+.cardCadastro {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid lightblue 4px;
+}
+
+.preferidos1 {
+    color: royalblue;
+    font-family: 'Copperplate Gothic';
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid lightblue 4px;
+    border-radius: 20px;
+}
+
+.slogan {
+    font-size: 25px;
+    font-family: 'Copperplate Gothic';
+    font-style: italic;
+    color: royalblue;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+    border: solid lightblue 4px;
+    border-radius: 20px;
+}
+
+.form-group {
+    background-color: rgba(137, 192, 250, 0.9);
+    border-radius: 5px;
+    margin-bottom: 0px;
+    border: solid lightblue 4px;
+}
+
+label {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.titulo {
+    color: royalblue;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid lightblue 4px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Copperplate Gothic';
+}
